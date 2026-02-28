@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: mikenekorock0000/kahoalps
+  branch: main
+media_folder: "public/images"
+public_folder: "/images"
+collections:
+  - name: "news"
+    label: "お知らせ"
+    folder: "src/content/news"
+    create: true
+    fields:
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "日付", name: "date", widget: "datetime"}
+      - {label: "本文", name: "body", widget: "markdown"}
+  - name: "mountains"
+    label: "山の紹介"
+    folder: "src/content/mountains"
+    fields:
+      - {label: "山名", name: "title", widget: "string"}
+      - {label: "標高", name: "elevation", widget: "number"}
+      - {label: "解説", name: "body", widget: "markdown"}
