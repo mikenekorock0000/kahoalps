@@ -5,35 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>嘉穂三山愛会 - 嘉穂アルプス</title>
     <style>
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; margin: 0; color: #333; }
-        header { background: #2d5a27; color: white; padding: 2rem; text-align: center; }
-        nav { background: #eee; padding: 1rem; text-align: center; }
-        .hero { height: 60vh; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #666; }
+        :root { --primary: #2d5a27; --accent: #2ecc71; --bg: #f4fbf4; }
+        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; margin: 0; background: var(--bg); color: #333; }
+        header { background: var(--primary); color: white; padding: 3rem 1rem; text-align: center; }
+        nav { background: #fff; padding: 1rem; text-align: center; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
+        .hero { height: 50vh; background: #ddd url('/images/hero.jpg') center/cover; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
         .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .card { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
-        h2 { color: #2d5a27; border-bottom: 2px solid #2d5a27; padding-bottom: 0.5rem; }
-        footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+        .mt-card { background: #fff; border-radius: 12px; overflow: hidden; margin-bottom: 2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .mt-img { height: 200px; background: #eee center/cover; }
+        .mt-content { padding: 1.5rem; }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); display: inline-block; }
+        footer { background: #333; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
     </style>
 </head>
 <body>
     <header>
         <h1>嘉穂三山愛会</h1>
-        <p>嘉穂アルプス（馬見山・屏山・古処山）を次世代へ</p>
+        <p>嘉穂アルプス（馬見山・屏山・古処山）の自然を愛し、守る会</p>
     </header>
     <nav>
         ホーム | お知らせ | 山の紹介 | お問い合わせ
     </nav>
-    <div class="hero">ここに嘉穂三山のメイン写真が入ります</div>
+    <div class="hero">
+        <div>嘉穂の峰々を、次世代へ</div>
+    </div>
     <div class="container">
-        <section>
+        <section id="news">
             <h2>お知らせ</h2>
-            <p>管理画面から追加された最新ニュースがここに表示されます。</p>
+            <div style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #eee;">
+                <p>2026.03.02: 嘉穂三山愛会 公式ホームページを開設しました！</p>
+            </div>
         </section>
-        <section>
-            <h2>嘉穂三山（嘉穂アルプス）の紹介</h2>
-            <div class="card"><h3>古処山</h3><p>特別天然記念物のツゲの原始林が広がる、歴史ある名峰です。</p></div>
-            <div class="card"><h3>屏山</h3><p>三山の中央に位置し、縦走路の要となる山です。</p></div>
-            <div class="card"><h3>馬見山</h3><p>標高978m。頂上からは素晴らしい眺望が楽しめます。</p></div>
+        
+        <section id="mountains" style="margin-top: 3rem;">
+            <h2>嘉穂三山の紹介</h2>
+            <div class="mt-card">
+                <div class="mt-img" style="background-image: url('/images/kosho.jpg');"></div>
+                <div class="mt-content"><h3>古処山（こしょさん）</h3><p>標高860m。国指定特別天然記念物のツゲの原始林が広がり、山頂付近の石灰岩群「白岩」は圧巻の景色です。</p></div>
+            </div>
+            <div class="mt-card">
+                <div class="mt-img" style="background-image: url('/images/hirayama.jpg');"></div>
+                <div class="mt-content"><h3>屏山（へいやさん）</h3><p>標高927m。嘉穂三山の中心に位置し、静かな山歩きが楽しめる縦走路の要所です。</p></div>
+            </div>
+            <div class="mt-card">
+                <div class="mt-img" style="background-image: url('/images/umamiyama.jpg');"></div>
+                <div class="mt-content"><h3>馬見山（うまみやま）</h3><p>標高978m。嘉穂アルプスの最高峰。頂上の展望台からは英彦山や有明海まで見渡せる360度の大パノラマが楽しめます。</p></div>
+            </div>
         </section>
     </div>
     <footer>
